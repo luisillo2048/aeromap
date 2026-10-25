@@ -1,8 +1,9 @@
 # AeroMap
 
-AeroMap es una aplicación web sencilla para explorar aeropuertos mediante un
-mapa interactivo. Actualmente muestra tres aeropuertos de la zona del Valle de
-México, junto con su nombre, ciudad y códigos IATA y OACI.
+AeroMap es una aplicación web para explorar aeropuertos mediante un mapa
+interactivo, pensada para quienes disfrutan de la aviación. Actualmente muestra
+tres aeropuertos de la zona del Valle de México, junto con su nombre, ciudad y
+códigos IATA y OACI.
 
 ## Funcionalidades
 
@@ -11,6 +12,8 @@ México, junto con su nombre, ciudad y códigos IATA y OACI.
 - Marcadores para los aeropuertos incluidos en los datos de la aplicación.
 - Ventanas emergentes con información de cada aeropuerto.
 - Ajuste automático del mapa para encuadrar todos los aeropuertos.
+- Índice visual de aviones comerciales con tarjetas de ejemplo.
+- Estructura preparada para sustituir los datos locales por una futura API.
 
 ## Tecnologías
 
@@ -78,7 +81,8 @@ npm run preview
 │   ├── components/
 │   │   └── MapView.jsx     # Inicialización del mapa y sus marcadores
 │   ├── data/
-│   │   └── airports.js     # Datos de los aeropuertos
+│   │   ├── airports.js     # Datos de los aeropuertos
+│   │   └── aircraft.js     # Datos de ejemplo de aviones comerciales
 │   ├── App.css             # Estilos principales de la aplicación
 │   ├── App.jsx             # Composición de la pantalla principal
 │   ├── index.css           # Estilos globales

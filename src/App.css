@@ -3,57 +3,190 @@
 }
 
 main {
-    max-width: 1100px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 40px 24px;
-}
-
-header {
-    padding: 32px 0;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-header h1 {
-    margin: 0;
-    color: #12304a;
-    font-size: 2.5rem;
-    letter-spacing: -1px;
-}
-
-header p {
-    margin-top: 8px;
-    color: #64748b;
-    font-size: 1.1rem;
-}
-
-section {
-    margin-top: 40px;
-    padding: 28px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-}
-
-section h2 {
-    margin-top: 0;
-    color: #12304a;
-    font-size: 1.5rem;
-}
-
-section p {
-    max-width: 650px;
-    color: #475569;
-    line-height: 1.7;
-}
-
-.map-container {
-    margin-top: 24px;
+    padding: 0 34px;
     overflow: hidden;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
 }
 
-#aeromap {
-    width: 100%;
-    height: 450px;
+.topbar {
+    align-items: center;
+    border-bottom: 1px solid #20363d;
+    display: flex;
+    justify-content: space-between;
+    min-height: 76px;
+}
+
+.brand {
+    align-items: center;
+    display: flex;
+    font-size: .88rem;
+    font-weight: 700;
+    gap: 10px;
+    letter-spacing: .16em;
+}
+
+.brand-mark {
+    align-items: center;
+    background: #f6b942;
+    border-radius: 50%;
+    color: #08151b;
+    display: flex;
+    font-size: 1rem;
+    height: 25px;
+    justify-content: center;
+    width: 25px;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    font-family: 'DM Mono', monospace;
+    font-size: .68rem;
+    gap: 28px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+nav a { color: #92a8ad; }
+nav a:hover { color: #f6b942; }
+
+.status-pill, .coming-soon {
+    align-items: center;
+    color: #f6b942;
+    display: flex;
+    gap: 7px;
+}
+
+.status-pill i {
+    background: #57d6ba;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #57d6ba;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+}
+
+.hero {
+    min-height: 510px;
+    padding: 90px 0 76px;
+    position: relative;
+}
+
+.hero-copy { max-width: 670px; position: relative; z-index: 1; }
+.eyebrow {
+    color: #57d6ba;
+    font-family: 'DM Mono', monospace;
+    font-size: .67rem;
+    letter-spacing: .2em;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+h1 {
+    font-size: clamp(3.7rem, 8vw, 7rem);
+    letter-spacing: -.08em;
+    line-height: .87;
+    margin-bottom: 32px;
+}
+
+h1 em { color: #f6b942; font-style: normal; }
+.hero-text {
+    color: #92a8ad;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 410px;
+}
+
+.hero-cta {
+    align-items: center;
+    border: 1px solid #f6b942;
+    color: #f6b942;
+    display: inline-flex;
+    font-family: 'DM Mono', monospace;
+    font-size: .7rem;
+    gap: 28px;
+    letter-spacing: .1em;
+    margin-top: 18px;
+    padding: 15px 17px 15px 20px;
+    text-transform: uppercase;
+    transition: background .2s, color .2s;
+}
+.hero-cta:hover { background: #f6b942; color: #08151b; }
+.hero-cta strong { font-size: 1.1rem; }
+
+.hero-orbit {
+    border: 1px solid #203d43;
+    border-radius: 50%;
+    height: 540px;
+    opacity: .7;
+    position: absolute;
+    right: -100px;
+    top: 20px;
+    width: 540px;
+}
+.hero-orbit::after {
+    background: #57d6ba;
+    border-radius: 50%;
+    box-shadow: 0 0 60px 20px #57d6ba;
+    content: '';
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 4px;
+}
+.orbit { border: 1px solid #2b5558; border-radius: 50%; position: absolute; }
+.orbit-one { height: 76%; left: 12%; top: 12%; transform: rotate(55deg) skew(-10deg); width: 76%; }
+.orbit-two { height: 38%; left: 31%; top: 31%; transform: rotate(-38deg) skew(12deg); width: 38%; }
+.radar-dot { background: #f6b942; border-radius: 50%; box-shadow: 0 0 15px #f6b942; height: 8px; position: absolute; width: 8px; }
+.dot-one { left: 19%; top: 28%; }
+.dot-two { right: 18%; top: 59%; }
+.hero-coordinate, .hero-label { color: #57d6ba; font-family: 'DM Mono', monospace; font-size: .62rem; position: absolute; }
+.hero-coordinate { bottom: 18%; left: 12%; line-height: 1.7; }
+.hero-label { right: 12%; top: 22%; }
+.plane-silhouette { color: #f6b942; font-size: 3rem; left: 42%; position: absolute; top: 44%; transform: rotate(-25deg); }
+.hero-stat { bottom: 75px; color: #92a8ad; display: flex; font-family: 'DM Mono', monospace; font-size: .62rem; gap: 10px; line-height: 1.5; position: absolute; right: 3px; text-transform: uppercase; }
+.stat-number { color: #f6b942; font-size: 1.8rem; line-height: 1; }
+
+.map-section, .aircraft-section { border-top: 1px solid #20363d; padding: 75px 0 90px; }
+.section-heading { align-items: end; display: flex; justify-content: space-between; gap: 30px; }
+h2 { color: #eef5f3; font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.06em; line-height: .95; margin-bottom: 0; }
+.section-intro { color: #92a8ad; font-size: .92rem; line-height: 1.7; margin: 0; max-width: 350px; }
+.map-container { border: 1px solid #305059; margin-top: 42px; overflow: hidden; padding: 8px; }
+#aeromap { height: 490px; width: 100%; }
+.leaflet-container { background: #d6e1dd; }
+
+.aircraft-section { background: #0c1d23; margin: 0 -34px; padding: 75px 34px 100px; }
+.coming-soon { font-family: 'DM Mono', monospace; font-size: .67rem; letter-spacing: .1em; }
+.aircraft-intro { margin-top: 22px; max-width: 590px; }
+.aircraft-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); margin-top: 42px; }
+.aircraft-card { background: #102830; border: 1px solid #2b5558; min-height: 350px; padding: 22px; position: relative; transition: border-color .2s, transform .2s; }
+.aircraft-card:hover { border-color: #f6b942; transform: translateY(-5px); }
+.card-topline, .card-footer { color: #57d6ba; font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .1em; }
+.card-topline { display: flex; justify-content: space-between; }
+.aircraft-icon { color: #f6b942; font-size: 5.5rem; height: 145px; line-height: 145px; opacity: .9; text-align: center; transform: rotate(-10deg); }
+.aircraft-card h3 { font-size: 1.45rem; letter-spacing: -.04em; margin-bottom: 3px; }
+.aircraft-maker { color: #92a8ad; font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .08em; }
+.card-stats { border-bottom: 1px solid #2b5558; border-top: 1px solid #2b5558; display: flex; gap: 28px; margin: 21px 0 17px; padding: 10px 0; }
+.card-stats span { color: #d2e0df; font-family: 'DM Mono', monospace; font-size: .64rem; }
+.card-stats b { color: #57d6ba; display: block; font-size: .5rem; font-weight: 400; margin-bottom: 5px; }
+.card-footer { display: flex; justify-content: space-between; }
+.card-footer span { color: #f6b942; }
+
+footer { color: #5f7a80; display: flex; font-family: 'DM Mono', monospace; font-size: .6rem; justify-content: space-between; letter-spacing: .1em; padding: 25px 0; }
+footer i { color: #f6b942; font-style: normal; }
+
+@media (max-width: 760px) {
+    main { padding: 0 20px; }
+    nav a { display: none; }
+    .hero { min-height: 690px; padding-top: 70px; }
+    .hero-orbit { height: 380px; right: -145px; top: 345px; width: 380px; }
+    .hero-stat { bottom: 34px; left: 0; right: auto; }
+    .section-heading { align-items: start; flex-direction: column; }
+    .section-intro { margin-top: 20px; }
+    .aircraft-section { margin: 0 -20px; padding-left: 20px; padding-right: 20px; }
+    .aircraft-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 10px; }
 }
